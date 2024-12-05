@@ -1,140 +1,151 @@
-
 .container1 {
-    max-width: 1200px;
-    margin: 20px auto;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: transparent;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto", sans-serif;
+}
+
+.container1 .btn-primary {
+  position: relative;
+  padding: 12px 24px;
+  background-color: #5a67d8;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container1 .btn-primary:hover {
+  background-color: #434190;
+  transform: scale(1.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.table thead {
+  background: #4a5568;
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.table thead th {
+  padding: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.table tbody tr {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table tbody tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.table tbody td {
+  padding: 12px 15px;
+  text-align: center;
+  color: #333333;
+}
+
+.table tbody td:first-child {
+  border-left: 4px solid #5a67d8;
+}
+
+.table tbody td:last-child {
+  border-right: 4px solid #5a67d8;
+}
+
+.table tbody td button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  font-family: inherit;
+}
+
+.btn-warning {
+  background-color: #ecc94b;
+  color: #2d3748;
+}
+
+.btn-warning:hover {
+  background-color: #d69e2e;
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background-color: #e53e3e;
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #c53030;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .container1 {
     padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; 
   }
-  
-  
-  .container1 .btn-primary {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 16px;
-    background-color: #1976d2;
-    color: white;
-    border-radius: 4px;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .container1 .btn-primary:hover {
-    background-color: #155cb0;
-  }
-  
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+
   .table thead {
-    background: #1976d2;
-    color: white;
+    display: none;
   }
-  
-  .table thead th {
-    padding: 12px;
-    text-align: left;
-    font-weight: bold;
-  }
-  
+
   .table tbody tr {
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s ease;
+    display: block;
+    margin-bottom: 20px;
   }
-  
-  .table tbody tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+
   .table tbody td {
-    padding: 12px;
-    text-align: left;
-  }
-  
-  
-  
-  .table tbody td button {
-    margin-left: 8px;
-  }
-  
-  
-  .btn {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
     font-size: 14px;
+    border: 1px solid #e0e0e0;
   }
-  
-  
-  .btn-warning {
-    background-color: #ff9800;
-    color: white;
+
+  .table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #4a5568;
+    margin-right: 8px;
   }
-  
-  .btn-warning:hover {
-    background-color: #e58900;
+
+  .container1 .btn-primary {
+    position: static;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: fit-content;
   }
-  
-  
-  .btn-danger {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  .btn-danger:hover {
-    background-color: #d32f2f;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .table thead {
-      display: none;
-    }
-  
-    .table tbody tr {
-      display: block;
-      margin-bottom: 15px;
-    }
-  
-    .table tbody td {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px;
-    }
-  
-    .table tbody td::before {
-      content: attr(data-label);
-      font-weight: bold;
-      margin-right: 10px;
-      color: #555;
-    }
-  
-    .btn {
-      padding: 8px 12px;
-      font-size: 14px;
-      display: inline-block; 
-      margin-bottom: 0;
-    }
-  
-    .container1 .btn-primary {
-      position: static;
-      display: block;
-      margin: 10px auto;
-      text-align: center;
-    }
-  }
-  
+}

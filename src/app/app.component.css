@@ -1,79 +1,72 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.sidenav-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .sidenav {
-    width: 260px;
-    background: linear-gradient(45deg, #1976d2, #0d47a1);
-    color: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sidenav-header {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-  }
-  
-  mat-nav-list a {
-    display: flex;
-    align-items: center;
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-  
-  mat-nav-list a:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
-  mat-nav-list a.active {
-    background: #1565c0;
-    font-weight: bold;
-  }
-  
-  mat-nav-list mat-icon {
-    margin-right: 12px;
-    color: white;
-  }
-  
-  .main-toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .menu-button {
-    margin-right: 16px;
-  }
-  
-  span {
-    font-size: 20px;
-    font-weight: 500;
-  }
-  
-  @media (max-width: 768px) {
-    .sidenav {
-      width: 220px;
-    }
-  
-    .sidenav-container {
-      flex-direction: column;
-    }
-  
-    .main-toolbar {
-      padding: 0 12px;
-    }
-  }
-  
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
